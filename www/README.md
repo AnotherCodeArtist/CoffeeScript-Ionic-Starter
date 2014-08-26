@@ -22,7 +22,7 @@ Changes to any files in the project directory will trigger a reload in your brow
 
 ###Gulp CoffeeScript Quirks
 Since the gulp coffee script task does not recover from compilation errors there's an alternative way to start coffee script compilation.  
-Use `npm start to trigger compilation with a watch (dirty misuse of npm's script hooks, I know)
+Use `npm start` to trigger compilation with a watch (dirty misuse of npm's script hooks, I know)
 
 #What is this Template about?
 
