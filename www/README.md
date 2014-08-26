@@ -1,6 +1,6 @@
 CoffeeScript Ionic Starter with Tabs and context-sensitive SideMenu
 ===
-![Screenshot](./IONIC-Tabs-SideMenu.png)
+![Screenshot](../IONIC-Tabs-SideMenu.png)
 
 Starting point for developing Ionic apps with coffeescript, tabs and a context-sensitive side-menu.
 
@@ -36,7 +36,7 @@ As a result you basically describe parts of a state machine within the navigatio
  want to go back. If such a 'back state' is defined, the back button is rendered and will take you there.
  
 ##Defining a Context Menu (Side Menu)
-Everthing is defined in a variable called `state` in the `NavigationCtrl` (see `www/coffee/navigation-controller.coffee`). 
+Everthing is defined in a variable called `states` in the `NavigationCtrl` (see `www/coffee/navigation-controller.coffee`). 
 For every page that should posses a context menu register the corresponding state and define the required properties:  
 
 
