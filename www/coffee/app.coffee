@@ -15,6 +15,8 @@ angular.module("starter", [
     "ionic"
     "starter.controllers"
     "starter.services"
+    "navigation.controllers"
+    "navigation.directives"
   ])
   .run(($ionicPlatform) ->
     $ionicPlatform.ready ->
@@ -38,6 +40,12 @@ angular.module("starter", [
         "tab-friends":
           templateUrl: "templates/tab-friends.html"
           controller: "FriendsCtrl"
+    ).state("tab.addfriend",
+        url: "/addfriend"
+        views:
+            "tab-friends":
+                templateUrl: "templates/add-friend.html"
+                controller: "AddFriendCtrl"
     ).state("tab.friend-detail",
       url: "/friend/:friendId"
       views:
