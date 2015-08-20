@@ -20,25 +20,13 @@ The nav bar that will be updated as we navigate between views.
 
 <ion-side-menus enable-menu-with-back-views="false">
 
-    <!--ion-side-menu-content ng-controller="NavigationCtrl">
-        <ion-nav-bar class="bar-positive">
-            <fhj-nav-back-button-- class="button-icon ion-arrow-left-c">
-            </fhj-nav-back-button>
-        </ion-nav-bar>
-        <ion-nav-buttons side="left">
-            <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
-            </button>
-        </ion-nav-buttons>
 
-
-        <ion-nav-view animation="slide-left-right"></ion-nav-view>
-    </ion-side-menu-content-->
     <ion-side-menu-content ng-controller="NavigationCtrl">
         <ion-nav-bar class="bar-stable">
             <ion-nav-back-button>
             </ion-nav-back-button>
             <ion-nav-buttons side="left">
-                <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+                <button class="button button-icon button-clear ion-navicon {{items.length === 0 ? 'invisible':''}}" menu-toggle="left">
                 </button>
             </ion-nav-buttons>
         </ion-nav-bar>
@@ -57,36 +45,6 @@ The nav bar that will be updated as we navigate between views.
             </ion-list>
         </ion-content>
     </ion-side-menu>
-
-    <!--ion-side-menu side="left" ng-controller="NavigationCtrl">
-        <ion-header-bar class="bar bar-header bar-dark">
-            <h1 class="title">{{title}}</h1>
-        </ion-header-bar>
-        <ion-content>
-            <ul class="list">
-                <li  ng-repeat="item in items">
-                    <div class="item {{item.icon?'icon-left '+item.icon:''}}"  menu-close nav-clear ng-click="handle(item)"> {{item.label}}</div>
-                </li>
-            </ul>
-        </ion-content>
-    </ion-side-menu-->
-
-    <!--ion-side-menu side="right">
-        <ion-header-bar class="bar bar-header bar-dark">
-            <h1 class="title">Right Menu</h1>
-        </ion-header-bar>
-        <ion-content>
-            <ul class="list">
-                <li>
-                    <a class="item" menu-close nav-clear href="#/search">Search</a>
-                </li>
-                <li>
-                    <a class="item" menu-close nav-clear href="#/settings">Settings</a>
-                </li>
-            </ul>
-        </ion-content>
-    </ion-side-menu-->
-
 
 </ion-side-menus>
 
