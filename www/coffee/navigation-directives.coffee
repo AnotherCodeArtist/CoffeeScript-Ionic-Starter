@@ -1,20 +1,13 @@
 directives = angular.module 'navigation.directives', []
 
 directives.directive 'fhjNavBackButton',
-    [
-        '$animate'
-        '$rootScope'
-        '$sanitize'
-        '$ionicNavBarConfig'
-        '$ionicNgClick'
-        ($animate, $rootScope, $sanitize, $ionicNavBarConfig, $ionicNgClick) ->
+    ($animate, $rootScope, $sanitize, $ionicConfig, $ionicNgClick) ->
 
             backIsShown = false;
             #If the current viewstate does not allow a back button,
             #always hide it.
             $rootScope.$on 'fhj.historyChange', (e, data) ->
                 backIsShown = !!data.showBack
-
             restrict: 'E'
             controller: 'NavigationCtrl'
             compile: (tElement, tAttrs) ->
@@ -24,7 +17,7 @@ directives.directive 'fhjNavBackButton',
 
                     # Add a default back button icon based on the nav config, unless one is set
                     if !hasIconChild && $element[0].className.indexOf('ion-') is -1
-                        $element.addClass $ionicNavBarConfig.backButtonIcon
+                        $element.addClass $ionicConfig.backButton.icon()
                     #Default to ngClick going back, but don't override a custom one
                     if !angular.isDefined($attr.ngClick)
                         $ionicNgClick($scope, $element, $scope.back)
@@ -44,4 +37,3 @@ directives.directive 'fhjNavBackButton',
                                 $animate.addClass($element, 'ng-hide')
                     )
 
-    ]

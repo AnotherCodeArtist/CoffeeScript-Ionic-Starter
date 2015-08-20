@@ -1,7 +1,6 @@
 app = angular.module 'navigation.controllers',[]
 
 app.controller 'NavigationCtrl',
-    ['$scope','$rootScope','$ionicSideMenuDelegate','$state',
      ($scope,$rootScope,$ionicSideMenuDelegate,$state) ->
         $scope.isVisible = false
         $scope.items = []
@@ -32,6 +31,7 @@ app.controller 'NavigationCtrl',
                 $state.go item.state
             else
                 $rootScope.$broadcast item.event
+
         $scope.$on '$stateChangeStart', (event,toState) ->
             newState = toState.name
             $scope.items = []
@@ -49,4 +49,3 @@ app.controller 'NavigationCtrl',
         $scope.showMenu = -> $ionicSideMenuDelegate.toggleLeft()
         $scope.showRightMenu = -> $ionicSideMenuDelegate.toggleRight()
 
-    ]
