@@ -13,16 +13,13 @@ Enjoy coffeescript + sass w/ live reloading.
 
 ```
 npm install
-gulp watch
+gulp coffee watch
 ionic serve
 ```
 Coffeescript files in www/coffee will be compiled to JS and concated into www/js/application.js.  Sass files in www/sass will be compiled to CSS and concated into www/css/style.css.
 
-Changes to any files in the project directory will trigger a reload in your browser, complete with your newly concated+compiled sass+coffee files!
+Changes to any files in the project directory will trigger a reload in your browser, complete with your newly concatenated+compiled sass+coffee files!
 
-###Gulp CoffeeScript Quirks
-Since the gulp coffee script task does not recover from compilation errors there's an alternative way to start coffee script compilation.  
-Use `npm start` to trigger compilation with a watch (dirty misuse of npm's script hooks, I know)
 
 #What is this Template about?
 

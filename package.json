@@ -19,7 +19,6 @@
     "ripple-emulator": "~0.9"
   },
   "scripts": {
-      "postinstall": "bower install",
-      "prestart": "coffee -o www/js -j application.js -w www/coffee"
+      "postinstall": "bower install"
   }
 }

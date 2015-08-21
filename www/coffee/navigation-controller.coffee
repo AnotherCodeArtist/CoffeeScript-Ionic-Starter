@@ -27,6 +27,7 @@ app.controller 'NavigationCtrl',
                 back: "tab.friends"
 
         $scope.handle = (item) ->
+            $ionicSideMenuDelegate.toggleLeft(false)
             if item.state
                 $state.go item.state
             else
