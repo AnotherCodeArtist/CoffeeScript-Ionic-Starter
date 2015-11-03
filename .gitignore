@@ -1,3 +1,6 @@
+/www/js
+/plugins
+/platforms
 .idea/
 node_modules/
 www/lib/

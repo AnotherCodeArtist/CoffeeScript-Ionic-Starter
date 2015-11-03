@@ -11,15 +11,23 @@ Getting Started
 
 Enjoy coffeescript + sass w/ live reloading.
 
-```
-npm install
-gulp coffee watch
-ionic serve
-```
+    npm install
+    
+    ionic state restore
+    
+    gulp coffee watch
+    
+    ionic serve
+
 Coffeescript files in www/coffee will be compiled to JS and concated into www/js/application.js.  Sass files in www/sass will be compiled to CSS and concated into www/css/style.css.
 
 Changes to any files in the project directory will trigger a reload in your browser, complete with your newly concatenated+compiled sass+coffee files!
 
+#Testing
+
+Tests are located in the _/test_ folder and need to have the extension _.spec.coffee_. 
+They can be started either by using the command _gulp test_ or _gulp bdd_, where the latter brings up Chrome
+ (which greatly improves debugging) and starts the test not in single-run mode.
 
 #What is this Template about?
 
